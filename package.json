@@ -3,6 +3,12 @@
     "author": "Nikunj Varshney",
     "version": "0.1.0",
     "private": true,
+    "scripts": {
+        "dev": "webpack-dev-server --mode development",
+        "build": "webpack --mode production",
+        "plop": "plop --plopfile ./generator/index.js && npm run create",
+        "create": "cti create ./src/components ./src/containers -n -w"
+    },
     "dependencies": {
         "mobx": "^5.15.0",
         "mobx-react": "^6.1.4",
@@ -11,43 +17,29 @@
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-router-dom": "^5.1.2",
-        "react-scripts": "3.2.0",
         "react-spring": "^8.0.27",
         "react-three-fiber": "^3.0.15",
+        "sass-loader": "^8.0.0",
         "three": "^0.111.0",
         "three.meshline": "^1.2.0"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "plop": "plop --plopfile ./generator/index.js",
-        "create": "cti create ./src/components -n -w"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
     },
     "devDependencies": {
         "@types/node": "^12.12.14",
         "@types/react": "^16.9.13",
         "@types/react-router-dom": "^5.1.3",
+        "awesome-typescript-loader": "^5.2.1",
         "create-ts-index": "^1.12.0",
+        "css-loader": "^3.2.1",
+        "html-webpack-plugin": "^3.2.0",
         "mobx-react-devtools": "^6.1.1",
         "plop": "^2.5.3",
         "prettier": "^1.19.1",
-        "typescript": "^3.7.2"
+        "source-map-loader": "^0.2.4",
+        "style-loader": "^1.0.1",
+        "terser": "^3.14.1",
+        "typescript": "^3.7.2",
+        "webpack": "4.41.2",
+        "webpack-cli": "3.3.10",
+        "webpack-dev-server": "3.9.0"
     }
 }

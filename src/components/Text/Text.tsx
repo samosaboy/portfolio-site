@@ -6,10 +6,10 @@ import './style.scss'
 
 interface ITextProps {
     children: any
-    position: any
-    opacity?: number
-    color: string
-    fontSize: number
+    position?: any
+    opacity?: any
+    color?: any
+    fontSize?: any
 }
 
 export const Text: React.FC<ITextProps> = ({
@@ -42,7 +42,10 @@ export const Text: React.FC<ITextProps> = ({
                     attach="map"
                     image={canvas}
                     premultiplyAlpha
-                    // onUpdate={s => (s.needsUpdate = true) as any}
+                    // @ts-ignore
+                    onUpdate={(s) => {
+                        return s.needsUpdate = true
+                    }}
                 />
             </a.spriteMaterial>
         </a.sprite>
