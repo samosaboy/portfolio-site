@@ -1,4 +1,5 @@
 {
+  "extends": "./paths",
   "compileOnSave": false,
   "compilerOptions": {
     "target": "esnext",
@@ -14,8 +15,11 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "lib": ["dom", "es2015", "es2016"],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -23,6 +27,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "exclude": ["dist"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "dist"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
