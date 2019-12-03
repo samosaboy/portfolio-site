@@ -35,6 +35,7 @@ export const Text: React.FC<ITextProps> = ({
         context.fillText(children, 1024, 1024 - 410 / 2)
         return canvas
     }, [children, width, height])
+
     return (
         <a.sprite scale={[scale, scale, 1]} position={position}>
             <a.spriteMaterial attach="material" transparent opacity={opacity}>
@@ -43,9 +44,7 @@ export const Text: React.FC<ITextProps> = ({
                     image={canvas}
                     premultiplyAlpha
                     // @ts-ignore
-                    onUpdate={(s) => {
-                        return s.needsUpdate = true
-                    }}
+                    onUpdate={s => (s.needsUpdate = true)}
                 />
             </a.spriteMaterial>
         </a.sprite>

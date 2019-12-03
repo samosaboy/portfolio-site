@@ -1,10 +1,10 @@
 import * as React from 'react'
 
 import './style.scss'
-import { useSpring } from 'react-spring'
+import { useSpring } from 'react-spring/three'
 import { useCallback } from 'react'
 import { Canvas } from 'react-three-fiber'
-import { Scene } from '@components'
+import { Main } from '@containers'
 
 interface IAppProps {}
 
@@ -15,7 +15,9 @@ export const App: React.FC<IAppProps> = () => {
             set({ mouse: [x - window.innerWidth / 2, y - window.innerHeight / 2] }),
         []
     )
-    const onScroll = useCallback(e => set({ top: e.target.scrollTop }), [])
+    const onScroll = useCallback(e => {
+        set({ top: e.target.scrollTop })
+    }, [])
 
     return (
         <>
@@ -25,8 +27,11 @@ export const App: React.FC<IAppProps> = () => {
                     top: 0,
                 }}
             >
-                <Scene top={top} mouse={mouse} />
+                <Main top={top} mouse={mouse} />
             </Canvas>
+            <div className="scroll-container" onScroll={onScroll} onMouseMove={onMouseMove}>
+                <div style={{ height: '525vh' }} />
+            </div>
         </>
     )
 }
