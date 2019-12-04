@@ -9,7 +9,11 @@ interface ITextProps {
     position?: any
     opacity?: any
     color?: any
+    textAlign?: CanvasTextAlign
     fontSize?: any
+    strokeColor?: any
+    fill?: boolean
+    strokeWidth?: number
 }
 
 export const Text: React.FC<ITextProps> = ({
@@ -18,21 +22,44 @@ export const Text: React.FC<ITextProps> = ({
     opacity,
     color = 'white',
     fontSize = 410,
+    textAlign = 'center',
+    strokeColor,
+    strokeWidth = 8,
+    fill = true,
 }) => {
     const {
         size: { width, height },
         viewport: { width: viewportWidth, height: viewportHeight },
     } = useThree()
+
     const scale = viewportWidth > viewportHeight ? viewportWidth : viewportHeight
+
     const canvas = useMemo(() => {
         const canvas = document.createElement('canvas')
-        canvas.width = canvas.height = 2048
         const context = canvas.getContext('2d')
+
+        canvas.width = canvas.height = 2048
+
         context.font = `bold ${fontSize}px -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif`
-        context.textAlign = 'center'
+        context.textAlign = textAlign
         context.textBaseline = 'middle'
-        context.fillStyle = color
-        context.fillText(children, 1024, 1024 - 410 / 2)
+
+        if (color) {
+            context.fillStyle = color
+        }
+
+        if (strokeColor) {
+            context.strokeStyle = strokeColor
+            context.lineWidth = strokeWidth
+            context.strokeText(children, 1024, 1024 - 410 / 2)
+        }
+
+        if (fill) {
+            context.fillText(children, 1024, 1024 - 410 / 2)
+        }
+
+
+
         return canvas
     }, [children, width, height])
 
