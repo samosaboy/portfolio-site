@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d539b0ee-a256-4442-b39d-9221528c5f1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Background/Background.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Background/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Background/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scene/Scene.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scene/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scene/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/App/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Main/Main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Main/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Main/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
