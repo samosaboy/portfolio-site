@@ -39,11 +39,11 @@ export const Main: React.FC<IMainProps> = ({ top, mouse }) => {
                     that means i'm gunna make beautiful stuff
                 </Text>
             </Scene>
-            <Scene position={[0, 0, 0]}>
+            <Scene position={[0, -1, -1]}>
                 <a.spotLight
                     intensity={0.5}
                     color="white"
-                    position={mouse.interpolate((x, y) => [x / 100, -y / 100, 6.5])}
+                    position={[0, 0, 100]}
                 />
                 <mesh visible position={[0, 0, 0]}>
                     <circleBufferGeometry attach={'geometry'} args={[1, 48]} />
